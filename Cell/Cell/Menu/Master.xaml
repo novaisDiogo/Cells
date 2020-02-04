@@ -3,17 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:page="clr-namespace:Cell.Paginas"
              mc:Ignorable="d"
              x:Class="Cell.Menu.Master">
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
-            <Button Text="Pagina1" Clicked="GoPagina1"/>
+            <StackLayout>
+                <Label Text="Celulas" />
+                <Button Text="Text Cell" Clicked="GoPagina1"/>
+                <Button Text="Image Cell" Clicked="GoPagina2"/>
+                <Button Text="Entry Cell" Clicked="GoPagina3"/>
+                <Button Text="Switch Cell" Clicked="GoPagina4"/>
+                <Button Text="View Cell" Clicked="GoPagina5"/>
+                <Label Text="Componentes" />
+                <Button Text="List View" Clicked="GoPagina6"/>
+                <Button Text="List Button View" Clicked="GoPagina7"/>
+            </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                
+                <page:TextCellPage/>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
